@@ -19,6 +19,7 @@ class MyApp extends StatelessWidget {
 ///init
 //edo
 //hallo
+//halo juga
 class MyHomePage extends StatelessWidget {
   //class homepage turunan dari class statelesswidget
   MyHomePage({Key key}) : super(key: key);
