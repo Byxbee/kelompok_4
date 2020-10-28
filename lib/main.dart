@@ -1,41 +1,58 @@
 import 'package:flutter/material.dart'; // import package
 
-void main() => runApp(MyApp()); // fungsi pertama kali yg dijalankan yg berisi class myApp
+void main() =>
+    runApp(MyApp()); // fungsi pertama kali yg dijalankan yg berisi class myApp
 
-class MyApp extends StatelessWidget { //turunan dari clas statelesswidget
+class MyApp extends StatelessWidget {
+  //turunan dari clas statelesswidget
   // This widget is the root of your application.
   @override //penggunaan nama class yg sama
-  Widget build(BuildContext context) { 
-    return MaterialApp( // mengembalikan materialapp yang berisi data data material design 
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      // mengembalikan materialapp yang berisi data data material design
       debugShowCheckedModeBanner: false, // menghapus logo debug
-      home: MyHomePage(), 
+      home: Page1(),
     );
   }
 }
-///init
-//edo
-class MyHomePage extends StatelessWidget { //class homepage turunan dari class statelesswidget
-  MyHomePage({Key key}) : super(key: key);
 
-  @override // penggunaan nama class yg sama
-  Widget build(BuildContext context) { 
-    return Scaffold( //mengembalikan scaffold yg berisi widget
-      appBar: AppBar( //didalamnya terdapat properti tittle 
-        backgroundColor: Colors.pink[400], // style warna pada appbar
-        title: Text('Smart English - SDGS 4'), //tittle pada appbar
-        centerTitle: true, // penempatan teks pada appbar
+class Page1 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Smart English - SDGS 4'),
+        backgroundColor: Colors.pink[400],
+        centerTitle: true,
       ),
-      backgroundColor: Colors.white, // style body
-      body: Center( //body berada di tengah
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center, //penempatan teks pada tengah body
-          children: <Widget>[
-            Text('M. Alaikal Fatoni - 182410102027',),
-            Text('Edo Tri Wicaksono - 182410102047'),
-            Text('M. Zulqarnain Hidayat - 182410102074'),
-          ],
-        ),
-      ),
+      body: Center(
+          child: RaisedButton(
+              child: Text('Next'),
+              onPressed: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) => Page2()));
+              })),
     );
   }
 }
+
+class Page2 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Smart English - SDGS 4'),
+        backgroundColor: Colors.pink[400],
+        centerTitle: true,
+      ),
+      body: Center(
+          child: RaisedButton(
+              child: Text('Back'),
+              onPressed: () {
+                Navigator.of(context).pop();
+              })),
+    );
+  }
+}
+
+//testing
