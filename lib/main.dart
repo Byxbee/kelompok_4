@@ -1,25 +1,18 @@
-import 'package:flutter/material.dart'; // import package
+import 'package:flutter/material.dart'; 
 
 void main() =>
-    runApp(MyApp()); // fungsi pertama kali yg dijalankan yg berisi class myApp
-
+    runApp(MyApp()); 
 class MyApp extends StatelessWidget {
-  //turunan dari clas statelesswidget
-  // This widget is the root of your application.
-  @override //penggunaan nama class yg sama
+  @override 
   Widget build(BuildContext context) {
     return MaterialApp(
-      // mengembalikan materialapp yang berisi data data material design
-      debugShowCheckedModeBanner: false, // menghapus logo debug
+      debugShowCheckedModeBanner: false,
       home: MyHomePage(),
     );
   }
 }
 
-///init
-//edo
-//hallo
-//halo juga
+//tes error github
 class MyHomePage extends StatelessWidget {
   //class homepage turunan dari class statelesswidget
   MyHomePage({Key key}) : super(key: key);
