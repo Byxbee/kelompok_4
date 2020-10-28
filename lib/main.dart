@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class Page1 extends StatelessWidget {
+class Page1 extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,18 +25,22 @@ class Page1 extends StatelessWidget {
         backgroundColor: Colors.pink[400],
         centerTitle: true,
       ),
-      body: Center(
-          child: RaisedButton(
-              child: Text('Next'),
-              onPressed: () {
-                Navigator.of(context)
-                    .push(MaterialPageRoute(builder: (context) => Page2()));
-              })),
+      body: Center(child: RaisedButton(
+        child: Text('Next'),
+        onPressed: (){
+          Navigator.of(context)
+          .push(
+            MaterialPageRoute(
+              builder: (context) =>Page2()
+            )
+          );
+        }
+      )),
     );
   }
 }
 
-class Page2 extends StatelessWidget {
+class Page2 extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -45,14 +49,13 @@ class Page2 extends StatelessWidget {
         backgroundColor: Colors.pink[400],
         centerTitle: true,
       ),
-      body: Center(
-          child: RaisedButton(
-              child: Text('Back'),
-              onPressed: () {
-                Navigator.of(context).pop();
-              })),
+      body: Center(child: RaisedButton(
+        child: Text('Back'),
+        onPressed: (){
+          Navigator.of(context)
+          .pop();
+        }
+      )),
     );
   }
 }
-
-//testing
