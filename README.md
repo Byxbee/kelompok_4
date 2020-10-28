@@ -1,4 +1,4 @@
-progress 2
+[progress 2]
 
 aplikasi smart english adalah aplikasi pembelajaran bahasa inggris untuk semua umur
 perubahan total pada main.dart untuk test navigasi
