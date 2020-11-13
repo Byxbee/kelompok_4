@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart'; // import package
+import 'dart:ui';
 
 void main() =>
     runApp(MyApp()); // fungsi pertama kali yg dijalankan yg berisi class myApp
@@ -47,12 +48,34 @@ class Page2 extends StatelessWidget {
         backgroundColor: Colors.pink[400],
         centerTitle: true,
       ),
-      body: Center(
-          child: RaisedButton(
-              child: Text('Back'),
-              onPressed: () {
-                Navigator.of(context).pop();
-              })),
+      // body: Center(
+      //     child: RaisedButton(
+      //         child: Text('Back'),
+      //         onPressed: () {
+      //           Navigator.of(context).pop();
+      //         }
+      //     )
+      // ),
+
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+          ),
+          Image(
+            image: AssetImage('assets/img/bromo.jpg'),
+            width: 200,
+            height: 200,
+          ),
+          RaisedButton(
+            onPressed:() {
+              Navigator.of(context).pop();
+            },
+            child:Text('back'),
+          ),
+        ],
+      )
     );
   }
 }
