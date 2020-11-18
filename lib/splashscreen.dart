@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:flutter_app/main.dart';
+import 'package:flutter_app/screen3.dart';
 
 class SplashScreen extends StatefulWidget {
   _SplashScreen createState() => _SplashScreen();
@@ -17,7 +18,7 @@ class _SplashScreen extends State<SplashScreen> {
     return Timer(duration, () {
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => Page1()),
+        MaterialPageRoute(builder: (context) => screen3()),
       );
     });
   }
