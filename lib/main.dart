@@ -43,39 +43,40 @@ class Page2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Smart English - SDGS 4'),
-        backgroundColor: Colors.pink[400],
-        centerTitle: true,
-      ),
-      // body: Center(
-      //     child: RaisedButton(
-      //         child: Text('Back'),
-      //         onPressed: () {
-      //           Navigator.of(context).pop();
-      //         }
-      //     )
-      // ),
+        appBar: AppBar(
+          title: Text('Smart English - SDGS 4'),
+          backgroundColor: Colors.pink[400],
+          centerTitle: true,
+        ),
+        // body: Center(
+        //     child: RaisedButton(
+        //         child: Text('Back'),
+        //         onPressed: () {
+        //           Navigator.of(context).pop();
+        //         }
+        //     )
+        // ),
 
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-          ),
-          Image(
-            image: AssetImage('assets/img/bromo.jpg'),
-            width: 200,
-            height: 200,
-          ),
-          RaisedButton(
-            onPressed:() {
-              Navigator.of(context).pop();
-            },
-            child:Text('back'),
-          ),
-        ],
-      )
-    );
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+            ),
+            Image(
+              image: AssetImage('assets/img/bromo.jpg'),
+              width: 200,
+              height: 200,
+            ),
+            RaisedButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+              child: Text('back'),
+            ),
+          ],
+        ));
   }
 }
+
+//hallo bang
