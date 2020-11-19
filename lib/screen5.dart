@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class screen4 extends StatelessWidget {
+class screen5 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -22,7 +22,7 @@ class screen4 extends StatelessWidget {
                 child: Align(
                   alignment: Alignment.topLeft,
                   child: Text(
-                    'Macam - Macam Tenses 1',
+                    'Macam - Macam Tenses 2',
                     style: TextStyle(fontSize: 40),
                   ),
                 ),
