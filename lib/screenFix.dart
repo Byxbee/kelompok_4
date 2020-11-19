@@ -4,7 +4,16 @@ import 'package:flutter_app/screen5.dart';
 import 'package:flutter_app/screen6.dart';
 import 'package:flutter_app/screen7.dart';
 
-class screenFix extends StatelessWidget {
+class screenFix extends StatefulWidget {
+  @override
+  _screenFixState createState() => _screenFixState();
+}
+
+class _screenFixState extends State<screenFix> {
+
+  var kelas10 = false;
+  var kelas11 = false;
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -13,79 +22,367 @@ class screenFix extends StatelessWidget {
           title: Text('Smart English - SDGS 4'),
           backgroundColor: Colors.pink[400],
           centerTitle: true,
+          automaticallyImplyLeading: false,
         ),
-        // body: Center(
-        //   child:Column(
-        //     children:[
-        //       Container(
-        //         color: Colors.blue,
-        //         margin: EdgeInsets.only(top: 50.0),
-        //         padding: EdgeInsets.all(160),
-        //         child: Text('halo'),
-        //       )
-        //     ],
-        //   ),
-        // ),
-        body: Card(
-          elevation: 8,
-          margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
-          child: ListTile(
-            //KETIKA LISTTILE DITAP, MAKA AKAN MENJALANKAN METHOD DIATAS
-            onTap: () => {
-              // print("clicked");
-              Navigator.of(context).push(
-                MaterialPageRoute(builder: (context) => screen4()),
-              )
-            },
-            contentPadding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-            //MULAI DARI SINI HINGGA CODE DIBAWAH HANYA MENAMPILKAN INFORMASI SURAH
-            //LEADING POSISINYA SEBELAH KIRI, DIMANA KITA GUNAKAN UNTUK MENAMPILKAN NOMOR URUT SURAH
-            leading: Container(
-              padding: EdgeInsets.only(right: 12),
-              decoration: BoxDecoration(
-                border: Border(
-                  right: BorderSide(width: 1, color: Colors.black),
-                ),
+        
+        body: Container(
+          child: ListView(
+            children: [
+              // card putih 1
+              Column(
+                children: [
+                  Container(
+                    child: Card(
+                      color: Colors.blueGrey[100],
+                      elevation: 8,
+                      margin: EdgeInsets.only(bottom: 10, top: 20, left: 20, right: 20),
+                      child: ListTile(
+                        onTap: () => {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(builder: (context)=>screen4()
+                              ),
+                          )
+                        },
+
+                      leading: Container(
+                        padding: EdgeInsets.only(right: 12),
+                        decoration: BoxDecoration(
+                          border: Border(
+                            right: BorderSide(width: 1, color: Colors.brown),
+                          ),
+                        ),
+                        child: CircleAvatar(
+                          // child: Text('1'),
+                          backgroundColor: Colors.blue,
+                        ),
+                      ),
+
+                        contentPadding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                        title: Text(
+                          'Judul 1',
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                        subtitle: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Row(
+                              children: <Widget>[
+                                Icon(
+                                  Icons.local_florist,
+                                  color: Colors.pinkAccent,
+                                ),
+                                Expanded(child: Text('Kelas X SMA')),
+                              ],
+                            ),
+                            Row(
+                              children: <Widget>[
+                                Icon(
+                                  Icons.local_florist,
+                                  color: Colors.pinkAccent,
+                                ),
+                                Text('Sumber Tahun 2017'),
+                              ],
+                            ),
+                            Column(
+                              children: <Widget> [
+                                FlatButton(
+                                  onPressed: (){
+                                    setState(() {
+                                      kelas10 = !kelas10;
+                                    });
+                                  },
+                                  child: Text('Read more'),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                          trailing: Icon(Icons.keyboard_arrow_right,size: 30,),
+                        ),
+                    ),
+                  ),
+
+                  //card biru
+                  if(kelas10)Container(
+                  child: Column(
+                    children: [
+                      Card(
+                          color: Colors.blueGrey,
+                          elevation: 8,
+                          margin: EdgeInsets.only(bottom: 10, top: 10, left: 40, right: 40),
+                          child: ListTile(
+                            onTap: () => {
+                              Navigator.of(context).push(
+                                MaterialPageRoute(builder: (context)=>screen4()
+                                  ),
+                              )
+                            },
+                            contentPadding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                            title: Text(
+                              'Judul 1',
+                              style: TextStyle(fontWeight: FontWeight.bold),
+                            ),
+                            subtitle: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                Row(
+                                  children: <Widget>[
+                                    Icon(
+                                      Icons.local_florist,
+                                      color: Colors.pinkAccent,
+                                    ),
+                                    Expanded(child: Text('Kelas X SMA')),
+                                  ],
+                                ),
+                                Row(
+                                  children: <Widget>[
+                                    Icon(
+                                      Icons.local_florist,
+                                      color: Colors.pinkAccent,
+                                    ),
+                                    Text('Sumber Tahun 2017'),
+                                  ],
+                                ),
+                              ],
+                            ),
+                              trailing: Icon(
+                                Icons.keyboard_arrow_right,
+                                size: 30,
+                              ),
+                            ),
+                      ),
+                      Card(
+                        color: Colors.blueGrey,
+                        elevation: 8,
+                        margin: EdgeInsets.only(bottom: 10, top: 10, left: 40, right: 40),
+                        child: ListTile(
+                          onTap: () => {
+                            Navigator.of(context).push(
+                              MaterialPageRoute(builder: (context)=>screen4()
+                                ),
+                            )
+                          },
+                          contentPadding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                          title: Text(
+                            'Judul 1',
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                          subtitle: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Row(
+                                children: <Widget>[
+                                  Icon(
+                                    Icons.local_florist,
+                                    color: Colors.pinkAccent,
+                                  ),
+                                  Expanded(child: Text('Kelas X SMA')),
+                                ],
+                              ),
+                              Row(
+                                children: <Widget>[
+                                  Icon(
+                                    Icons.local_florist,
+                                    color: Colors.pinkAccent,
+                                  ),
+                                  Text('Sumber Tahun 2017'),
+                                ],
+                              ),
+                            ],
+                          ),
+                            trailing: Icon(
+                              Icons.keyboard_arrow_right,
+                              size: 30,
+                            ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  ),//?
+                ],// **
               ),
-              child: CircleAvatar(child: Text('1')),
-            ),
-            //TITLE POSISINYA DITENGAH, KITA GUNAKAN UNTUK MENAMPILKAN NAMA SURAH (LENGKAP DENGAN BAHASA ARABNYA)
-            title: Text(
-              'Judul 1',
-              style: TextStyle(fontWeight: FontWeight.bold),
-            ),
-            //DAN SUBTITLE POSISINYA DIBAWAH TITLE UNTUK MENAMPILKAN INFORMASI TAMBAHAN
-            subtitle: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                //PERTAMA ADALAH TERJEMAHAN DARI NAMA SURAH
-                Row(
-                  children: <Widget>[
-                    Icon(
-                      Icons.local_florist,
-                      color: Colors.pinkAccent,
+
+              //card putih 2
+             Column(
+                children: [
+                  Container(
+                    child: Card(
+                      color: Colors.blueGrey[100],
+                      elevation: 8,
+                      margin: EdgeInsets.only(bottom: 10, top: 20, left: 20, right: 20),
+                      child: ListTile(
+                        onTap: () => {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(builder: (context)=>screen4()
+                              ),
+                          )
+                        },
+
+                      leading: Container(
+                        padding: EdgeInsets.only(right: 12),
+                        decoration: BoxDecoration(
+                          border: Border(
+                            right: BorderSide(width: 1, color: Colors.brown),
+                          ),
+                        ),
+                        child: CircleAvatar(
+                          // child: Text('1'),
+                          backgroundColor: Colors.blue,
+                        ),
+                      ),
+
+                        contentPadding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                        title: Text(
+                          'Judul 1',
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                        subtitle: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Row(
+                              children: <Widget>[
+                                Icon(
+                                  Icons.local_florist,
+                                  color: Colors.pinkAccent,
+                                ),
+                                Expanded(child: Text('Kelas X SMA')),
+                              ],
+                            ),
+                            Row(
+                              children: <Widget>[
+                                Icon(
+                                  Icons.local_florist,
+                                  color: Colors.pinkAccent,
+                                ),
+                                Text('Sumber Tahun 2017'),
+                              ],
+                            ),
+                            Column(
+                              children: <Widget> [
+                                FlatButton(
+                                  onPressed: (){
+                                    setState(() {
+                                      kelas11 = !kelas11;
+                                    });
+                                  },
+                                  child: Text('Read more'),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                          trailing: Icon(Icons.keyboard_arrow_right,size: 30,),
+                        ),
                     ),
-                    Expanded(child: Text('Kelas X SMA')),
-                  ],
-                ),
-                //JUMLAH AYAT DARI SURAH TERSEBUT
-                Row(
-                  children: <Widget>[
-                    Icon(
-                      Icons.local_florist,
-                      color: Colors.pinkAccent,
-                    ),
-                    Text('Sumber Tahun 2017'),
-                  ],
-                ),
-              ],
-            ),
-            //POSISINYA PALING KANAN, KITA GUNAKAN UNTUK MENAMPILKAN ICON SAJA
-            trailing: Icon(
-              Icons.keyboard_arrow_right,
-              size: 30,
-            ),
+                  ),
+
+                  //card biru
+                  if(kelas11)Container(
+                  child: Column(
+                    children: [
+                      Card(
+                          color: Colors.blueGrey,
+                          elevation: 8,
+                          margin: EdgeInsets.only(bottom: 10, top: 10, left: 40, right: 40),
+                          child: ListTile(
+                            onTap: () => {
+                              Navigator.of(context).push(
+                                MaterialPageRoute(builder: (context)=>screen4()
+                                  ),
+                              )
+                            },
+                            contentPadding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                            title: Text(
+                              'Judul 1',
+                              style: TextStyle(fontWeight: FontWeight.bold),
+                            ),
+                            subtitle: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                Row(
+                                  children: <Widget>[
+                                    Icon(
+                                      Icons.local_florist,
+                                      color: Colors.pinkAccent,
+                                    ),
+                                    Expanded(child: Text('Kelas X SMA')),
+                                  ],
+                                ),
+                                Row(
+                                  children: <Widget>[
+                                    Icon(
+                                      Icons.local_florist,
+                                      color: Colors.pinkAccent,
+                                    ),
+                                    Text('Sumber Tahun 2017'),
+                                  ],
+                                ),
+                              ],
+                            ),
+                              trailing: Icon(
+                                Icons.keyboard_arrow_right,
+                                size: 30,
+                              ),
+                            ),
+                      ),
+                      Card(
+                        color: Colors.blueGrey,
+                        elevation: 8,
+                        margin: EdgeInsets.only(bottom: 10, top: 10, left: 40, right: 40),
+                        child: ListTile(
+                          onTap: () => {
+                            Navigator.of(context).push(
+                              MaterialPageRoute(builder: (context)=>screen4()
+                                ),
+                            )
+                          },
+                          contentPadding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                          title: Text(
+                            'Judul 1',
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                          subtitle: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Row(
+                                children: <Widget>[
+                                  Icon(
+                                    Icons.local_florist,
+                                    color: Colors.pinkAccent,
+                                  ),
+                                  Expanded(child: Text('Kelas X SMA')),
+                                ],
+                              ),
+                              Row(
+                                children: <Widget>[
+                                  Icon(
+                                    Icons.local_florist,
+                                    color: Colors.pinkAccent,
+                                  ),
+                                  Text('Sumber Tahun 2017'),
+                                ],
+                              ),
+                            ],
+                          ),
+                            trailing: Icon(
+                              Icons.keyboard_arrow_right,
+                              size: 30,
+                            ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  ),//?
+                ],// **
+              ),
+
+
+
+            //kurung tutup dari segala awal kurung buka
+            ],
           ),
-        ));
+        ),
+
+    );
   }
 }
