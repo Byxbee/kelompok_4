@@ -40,7 +40,8 @@ class screen3 extends StatelessWidget {
                 onPressed: () {
                   // print("clicked");
                   Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => screen4()),
+                    MaterialPageRoute(
+                        builder: (context) => WikipediaExplorer()),
                   );
                 },
                 child: Align(
