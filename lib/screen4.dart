@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 import 'dart:async';
 
-class WikipediaExplorer extends StatefulWidget {
+class screen4 extends StatefulWidget {
   @override
-  _WikipediaExplorerState createState() => _WikipediaExplorerState();
+  _screen4 createState() => _screen4();
 }
 
-class _WikipediaExplorerState extends State<WikipediaExplorer> {
+class _screen4 extends State<screen4> {
   Completer<WebViewController> _controller = Completer<WebViewController>();
   final Set<String> _favorites = Set<String>();
 
@@ -20,8 +20,7 @@ class _WikipediaExplorerState extends State<WikipediaExplorer> {
         centerTitle: true,
       ),
       body: WebView(
-        initialUrl:
-            'https://www.necerz.com/2019/12/penjelasan-passive-voice-beserta.html?m=1',
+        initialUrl: 'https://www.necerz.com/2020/06/simple-present.html',
         onWebViewCreated: (WebViewController webViewController) {
           _controller.complete(webViewController);
         },

@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 import 'dart:async';
 
-class screen7 extends StatefulWidget {
+class screen9 extends StatefulWidget {
   @override
-  _screen7 createState() => _screen7();
+  _screen9 createState() => _screen9();
 }
 
-class _screen7 extends State<screen7> {
+class _screen9 extends State<screen9> {
   Completer<WebViewController> _controller = Completer<WebViewController>();
   final Set<String> _favorites = Set<String>();
 
@@ -21,7 +21,7 @@ class _screen7 extends State<screen7> {
       ),
       body: WebView(
         initialUrl:
-            'https://www.necerz.com/2019/12/penjelasan-passive-voice-beserta.html?m=1',
+            'https://www.necerz.com/2019/12/part-of-speech-jenis-fungsi-.html?m=1',
         onWebViewCreated: (WebViewController webViewController) {
           _controller.complete(webViewController);
         },
