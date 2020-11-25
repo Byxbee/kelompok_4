@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_app/screen2.dart';
 
@@ -8,7 +7,6 @@ class screen1 extends StatefulWidget {
 }
 
 class _screen1State extends State<screen1> {
-
   var gambar = true;
 
   @override
@@ -34,16 +32,18 @@ class _screen1State extends State<screen1> {
             Row(
               crossAxisAlignment: CrossAxisAlignment.center,
             ),
-            if(gambar) Image(
-              image: AssetImage('assets/img/bromo.jpg'),
-              width: 200,
-              height: 200,
-            ),
-            RaisedButton(onPressed: (){
-              setState(() {
-                gambar = !gambar;
-              });
-            },
+            if (gambar)
+              Image(
+                image: AssetImage('assets/img/bromo.jpg'),
+                width: 200,
+                height: 200,
+              ),
+            RaisedButton(
+              onPressed: () {
+                setState(() {
+                  gambar = !gambar;
+                });
+              },
               child: Text('sembunyikan gambar'),
             ),
             RaisedButton(
@@ -54,10 +54,8 @@ class _screen1State extends State<screen1> {
             ),
             RaisedButton(
               onPressed: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (context) => screen2())
-                );
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) => screen2()));
               },
               child: Text('next'),
             ),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart'; // import package
 import 'dart:ui';
-
+import 'package:flutter_app/splashscreen.dart';
 import 'package:flutter_app/screen1.dart';
 
 void main() =>
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       // mengembalikan materialapp yang berisi data data material design
       debugShowCheckedModeBanner: false, // menghapus logo debug
-      home: Page1(),
+      home: SplashScreen(),
     );
   }
 }
@@ -35,9 +35,7 @@ class Page1 extends StatelessWidget {
               child: Text('Next'),
               onPressed: () {
                 Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (context) => screen1()
-                  ),
+                  MaterialPageRoute(builder: (context) => screen1()),
                 );
               })),
     );
