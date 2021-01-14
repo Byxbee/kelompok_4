@@ -17,6 +17,7 @@ class _screen1State extends State<screen1> {
           backgroundColor: Colors.pink[400],
           centerTitle: true,
         ),
+        drawer: Drawer(),
         // body: Center(
         //     child: RaisedButton(
         //         child: Text('Back'),

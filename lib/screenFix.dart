@@ -1,10 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/listingPage.dart';
+import 'package:flutter_app/openCamera.dart';
 import 'package:flutter_app/screen4.dart';
 import 'package:flutter_app/screen5.dart';
 import 'package:flutter_app/screen6.dart';
 import 'package:flutter_app/screen7.dart';
 import 'package:flutter_app/screen8.dart';
 import 'package:flutter_app/screen9.dart';
+import 'package:camera/camera.dart';
+import 'dart:async';
+import 'dart:io';
+import 'package:camera/camera.dart';
+import 'package:flutter/material.dart';
+import 'package:path/path.dart' show join;
+import 'package:path_provider/path_provider.dart';
 
 class screenFix extends StatefulWidget {
   @override
@@ -12,6 +21,7 @@ class screenFix extends StatefulWidget {
 }
 
 class _screenFixState extends State<screenFix> {
+
   var kelas10 = false;
   var kelas11 = false;
   var kelas12 = false;
@@ -25,6 +35,31 @@ class _screenFixState extends State<screenFix> {
         backgroundColor: Colors.pink[400],
         centerTitle: true,
         automaticallyImplyLeading: false,
+      ),
+      endDrawer: Drawer(
+          child: ListView(
+            // Important: Remove any padding from the ListView.
+            padding: EdgeInsets.zero,
+            children: [
+              DrawerHeader(
+                // child: Text('Drawer Header'),
+                decoration: BoxDecoration(color: Colors.pink[400],),
+              ),
+
+              RaisedButton(
+                onPressed: (){
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context)=> openCamera()));
+                },
+                child: Text("camera"),
+              ),
+              RaisedButton(
+                onPressed: (){
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context)=> IndexPage()));
+                },
+                child: Text("listing http"),
+              ),
+            ],
+          ),
       ),
       body: Container(
         child: ListView(
@@ -582,6 +617,8 @@ class _screenFixState extends State<screenFix> {
           ],
         ),
       ),
+      // drawer: Drawer(),
+
     );
   }
 }
