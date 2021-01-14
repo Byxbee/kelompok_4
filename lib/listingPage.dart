@@ -41,6 +41,7 @@ class _IndexPageState extends State<IndexPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Listing Users"),
+        backgroundColor: Colors.pink[400],
       ),
       body: getBody(),
     );
