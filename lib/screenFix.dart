@@ -7,6 +7,7 @@ import 'package:flutter_app/screen6.dart';
 import 'package:flutter_app/screen7.dart';
 import 'package:flutter_app/screen8.dart';
 import 'package:flutter_app/screen9.dart';
+import 'package:flutter_app/screenQuiz.dart';
 
 class screenFix extends StatefulWidget {
   @override
@@ -549,6 +550,63 @@ class _screenFixState extends State<screenFix> {
                       ],
                     ),
                   ), //?
+              ], // **
+            ),
+
+//card putih 4
+            Column(
+              children: [
+                Container(
+                  child: Card(
+                    color: Colors.blueGrey[100],
+                    elevation: 8,
+                    margin: EdgeInsets.only(
+                        bottom: 10, top: 20, left: 20, right: 20),
+                    child: ListTile(
+                      leading: Container(
+                        padding: EdgeInsets.only(right: 12),
+                        decoration: BoxDecoration(
+                          border: Border(
+                            right: BorderSide(width: 1, color: Colors.brown),
+                          ),
+                        ),
+                        child: Icon(
+                          Icons.book,
+                          color: Colors.pinkAccent,
+                          size: 70,
+                        ),
+                      ),
+                      contentPadding:
+                          EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+                      title: Text(
+                        'Quiz Umum SMA',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 24),
+                      ),
+                      subtitle: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          Column(
+                            children: <Widget>[
+                              FlatButton(
+                                onPressed: () => {
+                                  Navigator.of(context).push(
+                                    MaterialPageRoute(
+                                        builder: (context) => screenQuiz()),
+                                  )
+                                },
+                                child: Text(
+                                  'Mulai Quiz',
+                                  style: TextStyle(fontSize: 16),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
               ], // **
             ),
 
