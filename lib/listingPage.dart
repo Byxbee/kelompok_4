@@ -41,7 +41,6 @@ class _IndexPageState extends State<IndexPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Listing Users"),
-        backgroundColor: Colors.pink[400],
       ),
       body: getBody(),
     );
@@ -89,15 +88,11 @@ class _IndexPageState extends State<IndexPage> {
                   SizedBox(height: 10,),
                   Text(email.toString(),style: TextStyle(color: Colors.grey),)
                 ],
-              ),
+              )
             ],
           ),
-
-
-
         ),
       ),
     );
-
   }
 }

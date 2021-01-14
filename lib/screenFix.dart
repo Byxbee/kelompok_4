@@ -7,13 +7,6 @@ import 'package:flutter_app/screen6.dart';
 import 'package:flutter_app/screen7.dart';
 import 'package:flutter_app/screen8.dart';
 import 'package:flutter_app/screen9.dart';
-import 'package:camera/camera.dart';
-import 'dart:async';
-import 'dart:io';
-import 'package:camera/camera.dart';
-import 'package:flutter/material.dart';
-import 'package:path/path.dart' show join;
-import 'package:path_provider/path_provider.dart';
 
 class screenFix extends StatefulWidget {
   @override
@@ -28,7 +21,6 @@ class _screenFixState extends State<screenFix> {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
       appBar: AppBar(
         title: Text('Smart English - SDGS 4'),
@@ -43,7 +35,7 @@ class _screenFixState extends State<screenFix> {
             children: [
               DrawerHeader(
                 // child: Text('Drawer Header'),
-                decoration: BoxDecoration(color: Colors.pink[400],),
+                decoration: BoxDecoration(color: Colors.pink[400],), child: null,
               ),
 
               RaisedButton(
