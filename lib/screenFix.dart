@@ -101,24 +101,7 @@ class _screenFixState extends State<screenFix> {
                       subtitle: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
-                          // Row(
-                          //   children: <Widget>[
-                          //     Icon(
-                          //       Icons.book,
-                          //       color: Colors.pinkAccent,
-                          //     ),
-                          //     Expanded(child: Text('Kelas X SMA')),
-                          //   ],
-                          // ),
-                          // Row(
-                          //   children: <Widget>[
-                          //     Icon(
-                          //       Icons.local_florist,
-                          //       color: Colors.pinkAccent,
-                          //     ),
-                          //     Text('Sumber Tahun 2017'),
-                          //   ],
-                          // ),
+
                           Column(
                             children: <Widget>[
                               FlatButton(
@@ -284,24 +267,6 @@ class _screenFixState extends State<screenFix> {
                       subtitle: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
-                          // Row(
-                          //   children: <Widget>[
-                          //     Icon(
-                          //       Icons.local_florist,
-                          //       color: Colors.pinkAccent,
-                          //     ),
-                          //     Expanded(child: Text('Kelas X SMA')),
-                          //   ],
-                          // ),
-                          // Row(
-                          //   children: <Widget>[
-                          //     Icon(
-                          //       Icons.local_florist,
-                          //       color: Colors.pinkAccent,
-                          //     ),
-                          //     Text('Sumber Tahun 2017'),
-                          //   ],
-                          // ),
                           Column(
                             children: <Widget>[
                               FlatButton(
@@ -467,24 +432,6 @@ class _screenFixState extends State<screenFix> {
                       subtitle: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
-                          // Row(
-                          //   children: <Widget>[
-                          //     Icon(
-                          //       Icons.local_florist,
-                          //       color: Colors.pinkAccent,
-                          //     ),
-                          //     Expanded(child: Text('Kelas X SMA')),
-                          //   ],
-                          // ),
-                          // Row(
-                          //   children: <Widget>[
-                          //     Icon(
-                          //       Icons.local_florist,
-                          //       color: Colors.pinkAccent,
-                          //     ),
-                          //     Text('Sumber Tahun 2017'),
-                          //   ],
-                          // ),
                           Column(
                             children: <Widget>[
                               FlatButton(
